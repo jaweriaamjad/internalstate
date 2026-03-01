@@ -1,0 +1,6 @@
+{
+  "data_dir": "data",
+  "results_dir": "results",
+  "figures_dir": "figures",
+  "models_dir": "models"
+}

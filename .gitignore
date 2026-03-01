@@ -1,0 +1,9 @@
+data/
+results/
+models/
+vae_logs/
+*.pyc
+__pycache__/
+.pytest_cache/
+*.egg-info/
+.eggs/

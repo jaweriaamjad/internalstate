@@ -1,0 +1,79 @@
+Repo root: /nfs/gatsbystor/jaweriaa/internalstate_code
+Running all figure scripts (outputs go to figures_dir/)...
+
+fig3.py (fig3b, fig3c)...
+['subject', 'eid', 'position', 'bias_probs', 'contrast', 'choice', 'feedback', 'stimOn_time', 'goCue_time', 'FMOT_time', 'feedback_time', 'max_pos', 'duration', 'z_mean', 'z_log_sigma', 'PC1', 'PC2', 'PC3']
+Subjects: 81, Sessions: 2371
+Min sessions per subject: 13
+Creating PC plots (fig3b, fig3c)...
+Done.
+  OK   fig3.py
+
+fig4.py (fig4a–fig4d)...
+Saved fig4a.pdf, fig4b.pdf, fig4c.pdf, fig4d.pdf to /nfs/gatsbystor/jaweriaa/internalstate_code/figures
+  OK   fig4.py
+
+fig5.py (fig5a–fig5f)...
+Creating kde plots...
+Number of high-quality pupil sessions: 93
+Loading existing processed data...
+Successfully loaded existing data:
+  - All subjects: 1795087 trials from 2368 sessions
+  - Pupil sessions: 54640 trials from 93 sessions
+Computing autocorrelations...
+Creating plots...
+Saved KDE plot: fig5d.pdf
+Saved KDE plot: fig5e.pdf
+Saved KDE plot: fig5f.pdf
+Creating KDE plots for raw data...
+Saved KDE plot: fig5a.pdf
+Saved KDE plot: fig5b.pdf
+Saved KDE plot: fig5c.pdf
+
+=== Summary Statistics ===
+All subjects (EI vs Stim): 2368 sessions
+Pupil sessions: 93 sessions
+
+Autocorrelation Correlations:
+EI vs Stim autocorrelation: r = 0.174, p = 1.42e-17
+EI vs Pupil autocorrelation: r = 0.253, p = 0.0145
+Stim vs Pupil autocorrelation: r = 0.136, p = 0.192
+
+Raw Data Correlations:
+EI vs Stim raw data: r = 0.061, p = 0
+EI vs Pupil raw data: r = -0.127
+Stim vs Pupil raw data: r = 0.091
+
+Figures saved to /nfs/gatsbystor/jaweriaa/internalstate_code/figures/ (fig5a–fig5f.pdf)
+  OK   fig5.py
+
+fig6.py (fig6a–fig6c)...
+Saved fig6a.pdf
+Saved fig6b.pdf
+Saved fig6c.pdf
+Figures saved to /nfs/gatsbystor/jaweriaa/internalstate_code/figures
+  OK   fig6.py
+
+fig7.py (fig7a–fig7c)...
+Analysing GLM Stimulus Coeff..........
+Loading existing results from /nfs/gatsbystor/jaweriaa/internalstate_code/results/fig7_cache/kde_weightedStim_3states_0.4_v2.csv
+Analysing Engagement Index.........
+Loading existing results from /nfs/gatsbystor/jaweriaa/internalstate_code/results/fig7_cache/kde_PC1_0.4_v2.csv
+Analysing Pupil Diameter.........
+Loading existing results from /nfs/gatsbystor/jaweriaa/internalstate_code/results/fig7_cache/kde_pupil_0.4_v2.csv
+Creating overlaid plots (fig7a, fig7b, fig7c)...
+Saved fig7a.pdf
+Saved fig7b.pdf
+Saved fig7c.pdf
+Figure 7 saved to /nfs/gatsbystor/jaweriaa/internalstate_code/figures/ (fig7a, fig7b, fig7c)
+  OK   fig7.py
+
+==================================================
+Done: 5/5 scripts succeeded.
+  PASS: fig3
+  PASS: fig4
+  PASS: fig5
+  PASS: fig6
+  PASS: fig7
+
+Figures (if generated) are in: figures/ (config paths.json figures_dir)
