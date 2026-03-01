@@ -1,5 +1,3 @@
-# Internal state paper — code repository
-
 This repository contains the code to reproduce the analyses and figures in the paper **"Internal state is at least two dimensional"** (Amjad, Hiratani & Latham). Preprint: [Internal state is at least two dimensional (Research Square)](https://assets-eu.researchsquare.com/files/rs-7749081/v1_covered_0e9653c4-13a2-473f-9694-819f65090418.pdf?c=1770805206).
 
 Code for the internal state analysis (VAE, GLM-HMM, pupil, manuscript figures).
