@@ -3,6 +3,7 @@ results/
 models/
 vae_logs/
 *.pyc
+**/slurm_logs/
 __pycache__/
 .pytest_cache/
 *.egg-info/
