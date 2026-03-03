@@ -13,6 +13,16 @@ The GLM-HMM code was adapted from [int-brain-lab/GLM-HMM](https://github.com/int
 
 VAE encoder weights are provided in **models** and can be used to obtain latents via `src/vae/3-get_latents.py`.
 
+## Setup
+
+Create a virtual environment and install dependencies:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate   # or on Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+```
+
 ## Reproduce manuscript figures
 
 Processed **data** and **results** (from VAE and GLM-HMM pipelines) are hosted here: **[Zenodo/OSF — link to be added]**.
@@ -25,3 +35,5 @@ Processed **data** and **results** (from VAE and GLM-HMM pipelines) are hosted h
    python src/manuscript_figures/run_all_figures.py
    ```
    Figure PDFs will be written to **figures/** (or the path set as `figures_dir` in `config/paths.json`).
+
+**Figure 8 (prior vs slope / prior vs noise):** Fig 8b uses a precompiled C program (`src/manuscript_figures/fig8b/gap`) that converts (z, gap, slope) to (z, sigma, prior). The binary is invoked automatically by `fig8.py`.

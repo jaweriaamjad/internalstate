@@ -48,24 +48,32 @@ def main():
 
     results = []
 
-    print("fig3.py (fig3b, fig3c)...")
-    results.append(("fig3", run_script("fig3.py")))
+    # print("fig3.py (fig3b, fig3c)...")
+    # results.append(("fig3", run_script("fig3.py")))
+    # print()
+
+    # print("fig4.py (fig4a–fig4d)...")
+    # results.append(("fig4", run_script("fig4.py")))
+    # print()
+
+    # print("fig5.py (fig5a–fig5f)...")
+    # results.append(("fig5", run_script("fig5.py")))
+    # print()
+
+    # print("fig6.py (fig6a–fig6c)...")
+    # results.append(("fig6", run_script("fig6.py", ["3"])))  # default K=3
+    # print()
+
+    # print("fig7.py (fig7a–fig7c)...")
+    # results.append(("fig7", run_script("fig7.py", ["3"])))  # default K=3
+    # print()
+
+    print("fig8.py (fig8a, fig8b)...")
+    results.append(("fig8", run_script("fig8.py", ["3"])))  # K=3, kernel 0.4 to match fig7 cache
     print()
 
-    print("fig4.py (fig4a–fig4d)...")
-    results.append(("fig4", run_script("fig4.py")))
-    print()
-
-    print("fig5.py (fig5a–fig5f)...")
-    results.append(("fig5", run_script("fig5.py")))
-    print()
-
-    print("fig6.py (fig6a–fig6c)...")
-    results.append(("fig6", run_script("fig6.py", ["3"])))  # default K=3
-    print()
-
-    print("fig7.py (fig7a–fig7c)...")
-    results.append(("fig7", run_script("fig7.py", ["3"])))  # default K=3
+    print("fig9.py (fig9 — Bayesian model performance)...")
+    results.append(("fig9", run_script("fig9.py")))
     print()
 
     # Summary
