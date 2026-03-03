@@ -68,12 +68,16 @@ def main():
     # results.append(("fig7", run_script("fig7.py", ["3"])))  # default K=3
     # print()
 
-    print("fig8.py (fig8a, fig8b)...")
-    results.append(("fig8", run_script("fig8.py", ["3"])))  # K=3, kernel 0.4 to match fig7 cache
-    print()
+    # print("fig8.py (fig8a, fig8b)...")
+    # results.append(("fig8", run_script("fig8.py", ["3"])))  # K=3, kernel 0.4 to match fig7 cache
+    # print()
 
     print("fig9.py (fig9 — Bayesian model performance)...")
     results.append(("fig9", run_script("fig9.py")))
+    print()
+
+    print("figM2.py (figM2 — gap vs assumed prior)...")
+    results.append(("figM2", run_script("figM2.py")))
     print()
 
     # Summary
