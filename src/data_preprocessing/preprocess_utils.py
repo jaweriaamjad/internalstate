@@ -45,7 +45,7 @@ def get_training_criteria(subjects, one=None):
     for col in df.columns:
         if col == 'subject':
             continue
-        df[col].loc[df[col].isnull()] = df[col].loc[df[col].isnull()].apply(lambda x: list())
+        df.loc[df[col].isnull(), col] = df.loc[df[col].isnull(), col].apply(lambda x: list())
         date_col = f'date__{col}'
         status_col = f'eid__{col}'
         df[[date_col, status_col]] = pd.DataFrame(df[col].tolist())

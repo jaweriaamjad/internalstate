@@ -34,7 +34,7 @@ MIN_SESSIONS = 15
 paths = config_utils.get_paths()
 paper = config_utils.get_paper_config()
 tag = paper["tag"]
-save_path = paths["data_dir"]
+save_path = join(str(paths["data_dir"]), "partially_processed")
 
 os.makedirs(save_path, exist_ok=True)
 

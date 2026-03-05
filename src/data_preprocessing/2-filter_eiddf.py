@@ -2,7 +2,6 @@
 Step 2: Filter sessions by behavioral QC (lapse, bias, min_trials, wheel data).
 Reads: 3-sessions_intrainingorlater_{tag}.pqt
 Outputs: 4-sessions_behav_filtered_{tag}.pqt (used by VAE and GLM-HMM).
-Adapted from Zoe Ashwood, Guido Meijer, Alberto Pezzotta (glm-hmm).
 """
 
 import sys
@@ -31,7 +30,7 @@ npr.seed(42)
 paths = config_utils.get_paths()
 paper = config_utils.get_paper_config()
 tag = paper["tag"]
-save_path = paths["data_dir"]
+save_path = join(str(paths["data_dir"]), "partially_processed")
 
 sess_df = pd.read_parquet(join(save_path, f'3-sessions_intrainingorlater_{tag}.pqt'))
 eids = sess_df.index.to_numpy()
