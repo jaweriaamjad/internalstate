@@ -25,7 +25,7 @@ pip install -r requirements.txt
 
 ## Reproduce manuscript figures
 
-Processed **data** and **results** (from VAE and GLM-HMM pipelines) are hosted here: **[Zenodo/OSF — link to be added]**.
+Processed **data** and **results** (from VAE and GLM-HMM pipelines) are hosted here: **[link to be added]**.
 
 1. Download the data and results from the link above and extract them.
 2. Create the **data** and **results** directories at the repo root (or your chosen paths).
