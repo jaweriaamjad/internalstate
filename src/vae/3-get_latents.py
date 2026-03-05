@@ -1,7 +1,8 @@
 """
 Step 3 (VAE): Extract latents for all trials using a trained encoder.
 Folder (model/run name) and probL come from config; no command-line args.
-Reads: data_dir/processed_for_vae/{tag}/allsubjects/allsubjects.pqt, results_dir/vae_logs/model_weights/vaelstm_enc
+Reads: data_dir/processed_for_vae/{tag}/allsubjects/allsubjects.pqt
+       Encoder from: vae_weights/vaelstm_enc (if exists) else results_dir/vae_logs/model_weights/vaelstm_enc
 Writes: results_dir/vaelogs/all_latents/{folder}/data_with_vaelatents.pqt
 """
 
@@ -31,7 +32,15 @@ tag = paper["tag"]
 results_dir = paths["results_dir"]
 data_dir = paths["data_dir"]
 data_path = join(data_dir, "processed_for_vae", tag)
-encoder_dir = join(results_dir, "vae_logs", "model_weights")
+
+# Check for encoder weights: vae_weights/ first, then results/vae_logs/model_weights/
+vae_weights_dir = _REPO / "vae_weights"
+if (vae_weights_dir / "vaelstm_enc").exists():
+    encoder_dir = str(vae_weights_dir)
+    print(f"Using encoder from vae_weights/")
+else:
+    encoder_dir = join(results_dir, "vae_logs", "model_weights")
+    print(f"Using encoder from {encoder_dir}")
 
 os.makedirs(join(results_dir, "vaelogs", "all_latents", folder), exist_ok=True)
 

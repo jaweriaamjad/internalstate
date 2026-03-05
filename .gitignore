@@ -1,6 +1,5 @@
 data/
 results/
-models/
 vae_logs/
 *.pyc
 **/slurm_logs/

@@ -1,5 +1,5 @@
 {
   "data_dir": "data",
   "results_dir": "results",
-  "models_dir": "models"
+  "figures_dir": "figures"
 }

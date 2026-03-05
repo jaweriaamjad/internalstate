@@ -34,14 +34,13 @@ def _resolve_path(p):
 
 def get_paths():
     """
-    Load config/paths.json and return data_dir, results_dir, figures_dir, models_dir
+    Load config/paths.json and return data_dir, results_dir, figures_dir
     as absolute Paths. Relative paths are resolved against the repo root.
     """
     cfg = _load_json("paths.json")
     out = {
         "data_dir": _resolve_path(cfg["data_dir"]),
         "results_dir": _resolve_path(cfg["results_dir"]),
-        "models_dir": _resolve_path(cfg["models_dir"]),
     }
     if "figures_dir" in cfg:
         out["figures_dir"] = _resolve_path(cfg["figures_dir"])

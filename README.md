@@ -11,7 +11,27 @@ Raw data can be downloaded via the ONE API (see the link above) using the IBL ta
 
 The GLM-HMM code was adapted from [int-brain-lab/GLM-HMM](https://github.com/int-brain-lab/GLM-HMM); running instructions for that pipeline can be found in that repository.
 
-VAE encoder weights are provided in **models** and can be used to obtain latents via `src/vae/3-get_latents.py`.
+VAE encoder weights are provided in **vae_weights/** and can be used to obtain latents via `src/vae/3-get_latents.py`.
+
+## Pipeline overview
+
+```
+1. Data preprocessing (src/data_preprocessing/)
+   └── Downloads sessions via IBL tag, filters by behavioral QC
+       
+2. Parallel pipelines:
+   ├── VAE (src/vae/)
+   │   └── 1-get_data4vae → 2-fit_vae → 3-get_latents
+   │
+   ├── GLM-HMM (src/glmhmm/)
+   │   └── See int-brain-lab/GLM-HMM for running instructions
+   │
+   └── Pupil (src/pupil/)
+       └── 1_calculate_diameter → 2_pupil_diameter_analysis → 3_select_high_quality_sessions
+
+3. Manuscript figures (src/manuscript_figures/)
+   └── Reads outputs from VAE, GLM-HMM, and pupil pipelines
+```
 
 ## Setup
 
