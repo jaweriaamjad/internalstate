@@ -36,4 +36,4 @@ Processed **data** and **results** (from VAE and GLM-HMM pipelines) are hosted h
    ```
    Figure PDFs will be written to **figures/** (or the path set as `figures_dir` in `config/paths.json`).
 
-**Figure 8 (prior vs slope / prior vs noise):** Fig 8b uses a precompiled C program (`src/manuscript_figures/fig8b/gap`) that converts (z, gap, slope) to (z, sigma, prior). The binary is invoked automatically by `fig8.py`.
+**Figure 8 (prior vs slope / prior vs noise):** Fig 8b uses a C program (`src/manuscript_figures/fig8b/`) that converts (z, gap, slope) to (z, sigma, prior). The source (`main.c`) and a precompiled binary (`gap`) are included. To recompile, run `make` in that directory. The binary is invoked automatically by `fig8.py`.
